@@ -4,15 +4,11 @@ import { RoundedButton } from '../../components/RoundedButton';
 import { fontSizes, spacing } from '../../utils/sizes';
 
 
-const HistoryItem = ({ item, index }) => {
+const HistoryItem = ({ item }) => {
   return <Text style={styles.historyItem(item.status)}>{item.subject}</Text>;
 };
 
 export const FocusHistory = ({ focusHistory, onClear }) => {
-  const clearHistory = () => {
-    onClear();
-  };
-
   return (
     <>
       <SafeAreaView style={{ flex: 0.5, alignItems: 'center' }}>
